@@ -15,4 +15,8 @@ return {
     "catppuccin/nvim",
     as = "catppuccin",
   },
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+  },
 }
