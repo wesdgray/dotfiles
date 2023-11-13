@@ -22,7 +22,11 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Update floating terminal to use powershell instead of cmd
-TERM_PATH = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+if vim.loop.os_uname().sysname == "Linux" then
+  TERM_PATH = "/usr/bin/bash"
+else
+  TERM_PATH = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+end
 local lazyterm = function()
   vim.print("opening term")
   Util.float_term(TERM_PATH, { cwd = Util.get_root() })
