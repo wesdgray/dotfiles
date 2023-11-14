@@ -9,9 +9,6 @@ return {
     "rebelot/kanagawa.nvim",
   },
   {
-    "nyoom-engineering/oxocarbon.nvim",
-  },
-  {
     "catppuccin/nvim",
     as = "catppuccin",
   },
