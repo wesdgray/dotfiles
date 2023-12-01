@@ -16,4 +16,10 @@ return {
     "rose-pine/neovim",
     as = "rose-pine",
   },
+  {
+    "olivercederborg/poimandres.nvim",
+  },
+  {
+    "AlexvZyl/nordic.nvim",
+  },
 }
