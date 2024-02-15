@@ -47,4 +47,12 @@ return {
       shell = vim.loop.os_uname().sysname == "Windows_NT" and "pwsh.exe" or vim.o.shell,
     },
   },
+  -- Add floating term for browsing current dir with -
+  {
+    "stevearc/oil.nvim",
+    cmd = "Oil",
+    init = function()
+      require("oil").setup()
+    end,
+  },
 }

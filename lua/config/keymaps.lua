@@ -60,3 +60,10 @@ end, { desc = "Harpoon - File 2" })
 map("n", "<leader>h3", function()
   harpoon_ui.nav_file(3)
 end, { desc = "Harpoon - File 3" })
+
+map("n", "<leader>bl", "<cmd>BufferLineMoveNext<CR>")
+map("n", "<leader>bh", "<cmd>BufferLineMovePrev<CR>")
+map("n", "L", "<cmd>BufferLineCycleNext<CR>")
+map("n", "H", "<cmd>BufferLineCyclePrev<CR>")
+
+map("n", "-", "<cmd>Oil --float<cr>")
