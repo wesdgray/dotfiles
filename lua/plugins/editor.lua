@@ -27,14 +27,15 @@ return {
     build = ":ToggleTerm",
     keys = {
       {
-        "<C-/>",
+        "<C-\\>",
         "<cmd>ToggleTerm<cr>",
         desc = "Toggle floating terminal",
       },
       {
-        "<C-_>",
+        "<C-\\>",
         "<cmd>ToggleTerm<cr>",
         desc = "Toggle floating terminal",
+        mode = "t",
       },
     },
     opts = {

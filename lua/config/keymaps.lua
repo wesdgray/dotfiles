@@ -27,17 +27,6 @@ if vim.loop.os_uname().sysname == "Linux" then
 else
   TERM_PATH = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
 end
-local lazyterm = function()
-  vim.print("opening term")
-  Util.float_term(TERM_PATH, { cwd = Util.get_root() })
-end
-map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<leader>fT", function()
-  Util.float_term(TERM_PATH)
-end, { desc = "Terminal (cwd)" })
--- C-/ is bound using C-_ in neovim on windows ._.
---map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
---map("n", "<c-_>", lazyterm, { desc = "Terminal (root dir)" })
 
 map("n", "<leader>ha", function()
   harpoon_mark.add_file()
