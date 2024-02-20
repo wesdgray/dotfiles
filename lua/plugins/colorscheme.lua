@@ -31,4 +31,10 @@ return {
   {
     "AlexvZyl/nordic.nvim",
   },
+  {
+    "bluz71/vim-nightfly-colors",
+  },
+  {
+    "rockerBOO/boo-colorscheme-nvim",
+  },
 }
