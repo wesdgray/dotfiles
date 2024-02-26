@@ -21,13 +21,6 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
--- Update floating terminal to use powershell instead of cmd
-if vim.loop.os_uname().sysname == "Linux" then
-  TERM_PATH = "/usr/bin/bash"
-else
-  TERM_PATH = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
-end
-
 map("n", "<leader>ha", function()
   harpoon_mark.add_file()
 end, { desc = "Harpoon - Add file" })

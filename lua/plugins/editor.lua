@@ -45,7 +45,8 @@ return {
       insert_mappings = true,
       start_in_insert = true,
       close_on_exit = true,
-      shell = vim.loop.os_uname().sysname == "Windows_NT" and "pwsh.exe" or vim.o.shell,
+      shell = vim.fn.executable("nu") == 1 and "nu"
+        or (vim.loop.os_uname().sysname == "Windows_NT" and "pwsh.exe" or vim.o.shell),
     },
   },
   -- Add floating term for browsing current dir with -
