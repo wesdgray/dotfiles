@@ -5,4 +5,8 @@ return {
   {
     "purescript-contrib/purescript-vim",
   },
+  -- f# syntax
+  {
+    "adelarsq/neofsharp.vim",
+  },
 }
