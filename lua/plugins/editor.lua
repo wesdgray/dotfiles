@@ -28,46 +28,15 @@ return {
   -- Disable annoying snippet thing changing shit
   {
     "L3MON4D3/LuaSnip",
-    dependencies = {
-      {
-        "rafamadriz/friendly-snippets",
-        config = function()
-          require("luasnip.loaders.from_vscode").lazy_load()
-        end,
-      },
-      {
-        "nvim-cmp",
-        dependencies = {
-          "saadparwaiz1/cmp_luasnip",
-        },
-        opts = function(_, opts)
-          opts.snippet = {
-            expand = function(args)
-              require("luasnip").lsp_expand(args.body)
-            end,
-          }
-          table.insert(opts.sources, { name = "luasnip" })
-        end,
-      },
-    },
-    opts = {
-      history = true,
-      delete_check_events = "TextChanged",
-    },
     -- stylua: ignore
     keys = {
-      --These default key bindings were the cause of so much grief. Commenting them out...
-      --[[
       {
         "<tab>",
-        function()
-          return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<tab>"
-        end,
+        false,
         expr = true, silent = true, mode = "i",
       },
-      { "<tab>", function() require("luasnip").jump(1) end, mode = "s" },
-      { "<s-tab>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
-      --]]
+      { "<tab>", false, mode = "s" },
+      { "<s-tab>", false, mode = { "i", "s" } },
     },
   },
 
