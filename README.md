@@ -1,6 +1,6 @@
 # My vimrc
 
-## Keymaps
+## Custom Keymaps
 
 `<leader>` is the space character
 
