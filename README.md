@@ -16,6 +16,8 @@
 | gd | Goto Definition |
 | gr | Goto References |
 | gi | Goto Implementations |
+| [d | Previous diagnostic |
+| ]d | Next diagnostic |
 | `<leader>D` | Type definition |
 | `<leader>ds` | Document LSP symbols |
 | `<leader>ws` | Workspace LSP symbols. Be sure language server is running or start with :LspStart `<langservername>` |
