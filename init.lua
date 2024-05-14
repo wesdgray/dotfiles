@@ -1,5 +1,6 @@
 vim.o.guifont = "MonoLisa:h12"
 vim.o.clipboard = "unnamedplus"
+vim.o.shiftwidth = 4
 
 -- Auto install lazy if missing
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -14,7 +15,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 -- Setup leader for lazy and plugins after lazy is setup
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -251,7 +251,58 @@ require("lazy").setup(
   	},
       },
     },
-
+    {
+      "tpope/vim-sleuth",
+      lazy = false
+    },
+    {
+      "hrsh7th/cmp-nvim-lsp",
+    },
+    {
+      "hrsh7th/cmp-buffer",
+    },
+    {
+      "L3MON4D3/LuaSnip",
+    },
+    {
+      "saadparwaiz1/cmp_luasnip",
+    },
+    {
+      "hrsh7th/nvim-cmp",
+      lazy = false,
+      depedencies = {
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip",
+      },
+      opts = function()
+        require("luasnip").config.setup({})
+        local cmp = require("cmp")
+        return {
+          completion = {
+            completeopt = "menu,menuone,noinsert"
+          },
+          sources = {
+            { name = "nvim_lsp" },
+            { name = "luasnip" },
+            { name = "buffer" },
+          },
+          snippet = {
+            expand = function(args)
+              require('luasnip').lsp_expand(args.body)
+            end,
+          },
+          mapping = cmp.mapping.preset.insert({
+            ['<C-Space'] = cmp.mapping.complete(),
+            ['<C-e>'] = cmp.mapping.abort(),
+            ['<C-n>'] = cmp.mapping.select_next_item(),
+            ['<C-p>'] = cmp.mapping.select_prev_item(),
+            ['<C-y>'] = cmp.mapping.confirm({ select = true}),
+          })
+        }
+      end,
+    }
   },
   -- lazy options
   {}

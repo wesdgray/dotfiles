@@ -27,3 +27,8 @@
 | <leader>hq | Harpoon quickmenu |
 | <leader>hj | Harpoon next |
 | <leader>hp | Harpoon previous |
+| <C-Space> | Show auto completion menu |
+| <C-n> | Next completion |
+| <C-p> | Prev completion |
+| <C-y> | Accept completion |
+| <C-e> | Close completion window |
