@@ -6,6 +6,7 @@
 
 | Binding | Action |
 | --- | --- |
+| - | Open Oil file explorer |
 | sf | Find files |
 | sk | Search keymaps |
 | sb | Search buffers |
