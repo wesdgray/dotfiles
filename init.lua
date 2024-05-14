@@ -106,6 +106,14 @@ require("lazy").setup(
           desc = "[S]earch [S]elp", 
           mode = "n"
         },
+        {
+          "sz", 
+          function() 
+            require("telescope.builtin").live_grep() 
+          end, 
+          desc = "[S]earch Ripgrep", 
+          mode = "n"
+        },
       }
     },
     {

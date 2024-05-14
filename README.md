@@ -11,6 +11,7 @@
 | sb | Search buffers |
 | sr | Resume search |
 | sh | Search help |
+| sz | Search ripgrep |
 | gd | Goto Definition |
 | gr | Goto References |
 | gi | Goto Implementations |
