@@ -34,3 +34,4 @@
 | <C-p> | Prev completion |
 | <C-y> | Accept completion |
 | <C-e> | Close completion window |
+| <C-\> | Show floating terminal |
