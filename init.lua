@@ -1,4 +1,5 @@
 vim.o.guifont = "MonoLisa:h12"
+vim.o.clipboard = "unnamedplus"
 
 -- Auto install lazy if missing
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -214,6 +215,43 @@ require("lazy").setup(
         },
       }
     },
+    {
+      "ThePrimeagen/harpoon",
+      dependencies = {
+	"nvim-lua/plenary.nvim",
+      },
+      keys = {
+	{
+	  "<leader>ha",
+	  function()
+	    require("harpoon.mark").add_file()
+	  end,
+	  desc = "[H]arpoon [A]dd",
+  	},
+	{
+	  "<leader>hq",
+	  function()
+	    require("harpoon.ui").toggle_quick_menu()
+	  end,
+	  desc = "[H]arpoon [Q]uickmenu",
+  	},
+	{
+	  "<leader>hj",
+	  function()
+	    require("harpoon.ui").nav_next()
+	  end,
+	  desc = "[H]arpoon Next",
+  	},
+	{
+	  "<leader>hk",
+	  function()
+	    require("harpoon.ui").nav_prev()
+	  end,
+	  desc = "[H]arpoon Prev",
+  	},
+      },
+    },
+
   },
   -- lazy options
   {}
