@@ -32,6 +32,7 @@ vim.api.nvim_create_autocmd(
 require("lazy").setup(
   -- lazy plugins
   {
+
     {
       "catppuccin/nvim",
       as = "catppuccin",
@@ -39,9 +40,11 @@ require("lazy").setup(
         vim.cmd.colorscheme "catppuccin"
       end
     },
+
     {
       "nvim-tree/nvim-web-devicons",
     },
+
     {
       "stevearc/oil.nvim",
       opts = {},
@@ -50,10 +53,12 @@ require("lazy").setup(
         { "-", "<CMD>Oil --float<CR>", desc = "Oil file explorer", mode = "n" }
       }
     },
+
     {
       "williamboman/mason.nvim",
       config = true
     },
+
     {
       "williamboman/mason-lspconfig.nvim",
       config = true,
@@ -61,14 +66,17 @@ require("lazy").setup(
         "williamboman/mason.nvim"
       },
     },
+
     {
       "j-hui/fidget.nvim",
       opts = {},
     },
+
     -- Util functions for telescope
     {
       "nvim-lua/plenary.nvim",
     },
+
     {
       "nvim-telescope/telescope.nvim",
       event = "VimEnter",
@@ -135,6 +143,7 @@ require("lazy").setup(
         },
       }
     },
+
     {
       "neovim/nvim-lspconfig",
       dependencies = {
@@ -249,6 +258,7 @@ require("lazy").setup(
         }
       }
     },
+
     {
       "ThePrimeagen/harpoon",
       dependencies = {
@@ -285,22 +295,28 @@ require("lazy").setup(
   	},
       },
     },
+
     {
       "tpope/vim-sleuth",
       lazy = false
     },
+
     {
       "hrsh7th/cmp-nvim-lsp",
     },
+
     {
       "hrsh7th/cmp-buffer",
     },
+
     {
       "L3MON4D3/LuaSnip",
     },
+
     {
       "saadparwaiz1/cmp_luasnip",
     },
+
     {
       "hrsh7th/nvim-cmp",
       lazy = false,
