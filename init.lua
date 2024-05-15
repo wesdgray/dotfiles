@@ -125,6 +125,14 @@ require("lazy").setup(
           desc = "[S]earch Ripgrep",
           mode = "n"
         },
+        {
+          "s.",
+          function()
+            require("telescope.builtin").oldfiles()
+          end,
+          desc = "[S]earch Recent Files (. for repeat)",
+          mode = "n"
+        },
       }
     },
     {

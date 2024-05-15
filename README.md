@@ -13,6 +13,7 @@
 | sr | Resume search |
 | sh | Search help |
 | sz | Search ripgrep |
+| s. | Search recent files (. for repeat) |
 | gd | Goto Definition |
 | gr | Goto References |
 | gi | Goto Implementations |
