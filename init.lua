@@ -56,7 +56,9 @@ require("lazy").setup(
 
     {
       "williamboman/mason.nvim",
-      config = true
+      opts = {
+        PATH = "append"
+      }
     },
 
     {
