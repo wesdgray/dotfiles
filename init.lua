@@ -35,6 +35,41 @@ require("lazy").setup(
   {
 
     {
+      "shaunsingh/nord.nvim",
+      init = function()
+        -- vim.cmd.colorscheme("nord")
+      end,
+    },
+
+    {
+      "ramojus/mellifluous.nvim",
+      init = function()
+        -- vim.cmd.colorscheme("mellifluous")
+      end,
+    },
+
+    {
+      "dgox16/oldworld.nvim",
+      init = function()
+        -- vim.cmd.colorscheme("oldworld")
+      end,
+    },
+
+    {
+      "xero/miasma.nvim",
+      init = function()
+        -- vim.cmd.colorscheme("miasma")
+      end,
+    },
+
+    {
+      "miikanissi/modus-themes.nvim",
+      init = function()
+        -- vim.cmd.colorscheme("modus_operandi")
+      end,
+    },
+
+    {
       "rose-pine/neovim",
       as = "rosepine",
       init = function()
@@ -61,7 +96,7 @@ require("lazy").setup(
     {
       "danilo-augusto/vim-afterglow",
       init = function()
-        vim.cmd.colorscheme("afterglow")
+        --vim.cmd.colorscheme("afterglow")
       end,
     },
 
@@ -69,7 +104,7 @@ require("lazy").setup(
       "embark-theme/vim",
       as = "embark",
       init = function()
-        --vim.cmd.colorscheme("embark")
+        vim.cmd.colorscheme("embark")
       end,
     },
 
@@ -116,7 +151,14 @@ require("lazy").setup(
       event = "VimEnter",
       dependencies = {
         "nvim-lua/plenary.nvim",
-	    "nvim-tree/nvim-web-devicons",
+        "nvim-tree/nvim-web-devicons",
+      },
+      opts = {
+        pickers = {
+          colorscheme = {
+            enable_preview = true
+          }
+        }
       },
       keys = {
         {
@@ -173,6 +215,14 @@ require("lazy").setup(
             require("telescope.builtin").oldfiles()
           end,
           desc = "[S]earch Recent Files (. for repeat)",
+          mode = "n"
+        },
+        {
+          "sc",
+          function()
+            require("telescope.builtin").colorscheme()
+          end,
+          desc = "[S]earch [C]olorschemes",
           mode = "n"
         },
       }

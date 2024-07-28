@@ -14,6 +14,7 @@
 | sh | Search help |
 | sz | Search ripgrep |
 | s. | Search recent files (. for repeat) |
+| sc | Search colorscheme previews |
 | gd | Goto Definition |
 | gr | Goto References |
 | gi | Goto Implementations |
