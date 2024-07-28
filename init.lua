@@ -1,6 +1,7 @@
 vim.o.guifont = "MonoLisa:h12"
 vim.o.clipboard = "unnamedplus"
 vim.o.shiftwidth = 4
+vim.o.termguicolors = true
 
 -- Auto install lazy if missing
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -34,11 +35,42 @@ require("lazy").setup(
   {
 
     {
+      "rose-pine/neovim",
+      as = "rosepine",
+      init = function()
+        -- vim.cmd.colorscheme("rose-pine")
+      end,
+    },
+
+    {
+      "nikolvs/vim-sunbather",
+      init = function()
+        -- vim.o.background = "dark"
+        -- vim.cmd.colorscheme("sunbather")
+      end,
+    },
+
+    {
       "catppuccin/nvim",
       as = "catppuccin",
       init = function()
-        vim.cmd.colorscheme "catppuccin"
+        -- vim.cmd.colorscheme "catppuccin"
       end
+    },
+
+    {
+      "danilo-augusto/vim-afterglow",
+      init = function()
+        vim.cmd.colorscheme("afterglow")
+      end,
+    },
+
+    {
+      "embark-theme/vim",
+      as = "embark",
+      init = function()
+        --vim.cmd.colorscheme("embark")
+      end,
     },
 
     {
@@ -381,6 +413,25 @@ require("lazy").setup(
         start_in_insert = true,
         close_on_exit = true,
         shell = vim.loop.os_uname().sysname == "Windows_NT" and "pwsh.exe" or vim.o.shell,
+      },
+    },
+
+    {
+      "folke/which-key.nvim",
+      event = "VeryLazy",
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      },
+      keys = {
+        {
+          "<leader>?",
+          function()
+            require("which-key").show({ global = false })
+          end,
+          desc = "Buffer Local Keymaps (which-key)",
+        },
       },
     },
 
