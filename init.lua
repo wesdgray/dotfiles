@@ -65,7 +65,7 @@ require("lazy").setup(
     {
       "miikanissi/modus-themes.nvim",
       init = function()
-        -- vim.cmd.colorscheme("modus_operandi")
+        vim.cmd.colorscheme("modus_vivendi")
       end,
     },
 
@@ -104,8 +104,16 @@ require("lazy").setup(
       "embark-theme/vim",
       as = "embark",
       init = function()
-        vim.cmd.colorscheme("embark")
+        -- vim.cmd.colorscheme("embark")
       end,
+    },
+
+    {
+      "nvim-treesitter/nvim-treesitter",
+    },
+
+    {
+      "gleam-lang/gleam.vim",
     },
 
     {
