@@ -2,6 +2,7 @@ vim.o.guifont = "MonoLisa:h12"
 vim.o.clipboard = "unnamedplus"
 vim.o.shiftwidth = 4
 vim.o.termguicolors = true
+vim.o.number = true
 
 -- Auto install lazy if missing
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
