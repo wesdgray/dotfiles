@@ -33,6 +33,20 @@ vim.api.nvim_create_autocmd(
 require("lazy").setup(
   -- lazy plugins
   {
+    {
+      "folke/tokyonight.nvim",
+      lazy = false,
+      init = function()
+        -- vim.cmd.colorscheme("tokyonight")
+      end,
+    },
+
+    {
+      "rebelot/kanagawa.nvim",
+      init = function()
+        vim.cmd.colorscheme("kanagawa")
+      end,
+    },
 
     {
       "shaunsingh/nord.nvim",
@@ -65,7 +79,7 @@ require("lazy").setup(
     {
       "miikanissi/modus-themes.nvim",
       init = function()
-        vim.cmd.colorscheme("modus_vivendi")
+        -- vim.cmd.colorscheme("modus_vivendi")
       end,
     },
 
