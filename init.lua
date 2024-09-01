@@ -37,7 +37,15 @@ require("lazy").setup(
       "catppuccin/nvim",
       as = "catppuccin",
       init = function()
-        vim.cmd.colorscheme "catppuccin"
+        -- vim.cmd.colorscheme "catppuccin"
+      end
+    },
+
+    {
+      "rose-pine/neovim",
+      name = "rose-pine",
+      init = function()
+        vim.cmd.colorscheme "rose-pine"
       end
     },
 
@@ -67,6 +75,12 @@ require("lazy").setup(
       dependencies = {
         "williamboman/mason.nvim"
       },
+    },
+
+    {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = true
     },
 
     {
