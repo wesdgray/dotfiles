@@ -109,6 +109,14 @@ require("lazy").setup(
     },
 
     {
+      "rose-pine/neovim",
+      name = "rose-pine",
+      init = function()
+        vim.cmd.colorscheme "rose-pine"
+      end
+    },
+
+    {
       "danilo-augusto/vim-afterglow",
       init = function()
         --vim.cmd.colorscheme("afterglow")
@@ -164,6 +172,12 @@ require("lazy").setup(
       dependencies = {
         "williamboman/mason.nvim"
       },
+    },
+
+    {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = true
     },
 
     {
