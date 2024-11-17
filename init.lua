@@ -439,6 +439,9 @@ require("lazy").setup(
 
     {
       "L3MON4D3/LuaSnip",
+      init = function()
+        require('snippets').add_snippets()
+      end
     },
 
     {
