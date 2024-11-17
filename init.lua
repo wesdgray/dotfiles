@@ -286,6 +286,9 @@ require("lazy").setup(
             require("lspconfig")[server_name].setup({})
           end
         })
+        if vim.fn.executable("rust-analyzer") then
+          require("lspconfig")["rust_analyzer"].setup({})
+        end
       end,
       keys = {
         {
