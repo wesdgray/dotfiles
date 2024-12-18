@@ -31,6 +31,13 @@ vim.api.nvim_create_autocmd(
   }
 )
 
+-- Annoy Snazzy with inlay_hint
+local inlay_hint_status = false
+vim.keymap.set('n', '<leader>l', function()
+  inlay_hint_status = not inlay_hint_status
+  vim.lsp.inlay_hint.enable(inlay_hint_status, { 0 })
+end, {silent = true })
+
 require("lazy").setup(
   -- lazy plugins
   {
@@ -539,6 +546,19 @@ require("lazy").setup(
         },
       },
     },
+    {
+      "NeogitOrg/neogit",
+      dependencies = {
+        "nvim-lua/plenary.nvim",         -- required
+        "sindrets/diffview.nvim",        -- optional - Diff integration
+
+        -- Only one of these is needed.
+        "nvim-telescope/telescope.nvim", -- optional
+        "ibhagwan/fzf-lua",              -- optional
+        "echasnovski/mini.pick",         -- optional
+      },
+      config = true
+    }
 
   },
   -- lazy options
