@@ -1,3 +1,4 @@
 {
-    "nvim": "$HOME/.config/nvim"
+    "nvim": "$HOME/.config/nvim",
+    "zellij": "$HOME/.config/zellij"
 }

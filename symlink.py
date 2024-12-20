@@ -8,9 +8,10 @@ def symlink_paths(path_map_filename: str):
     for from_dir, to_dir in path_map.items():
         from_dir = Path(from_dir).absolute()
         to_dir = Path(os.path.expandvars(to_dir)).absolute()
-        print(f"{from_dir=}\n{to_dir=}")
         if to_dir.is_symlink():
             to_dir.unlink()
+        if to_dir.exists():
+            _ = to_dir.rename(to_dir.parent.joinpath(to_dir.name + '.bak'))
         os.symlink(from_dir, to_dir, target_is_directory=True)
 if __name__ == '__main__':
     symlink_paths("path_map.json")
