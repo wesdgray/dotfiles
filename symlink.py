@@ -12,6 +12,6 @@ def symlink_paths(path_map_filename: str):
             to_dir.unlink()
         if to_dir.exists():
             _ = to_dir.rename(to_dir.parent.joinpath(to_dir.name + '.bak'))
-        os.symlink(from_dir, to_dir, target_is_directory=True)
+        os.symlink(from_dir, to_dir)
 if __name__ == '__main__':
     symlink_paths("path_map.json")
