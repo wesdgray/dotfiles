@@ -1,5 +1,6 @@
 {
     "nvim": "$HOME/.config/nvim",
     "zellij": "$HOME/.config/zellij",
-    ".zshrc": "$HOME/.zshrc"
+    ".zshrc": "$HOME/.zshrc",
+    ".wezterm.lua": "$HOME/.wezterm.lua"
 }
