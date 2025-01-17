@@ -4,6 +4,8 @@ if type -a pyenv &> /dev/null ; then
     eval "$(pyenv init -)"
 fi
 
+bindkey "^R" history-incremental-search-backward
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export BREW_LOCATION="$HOME/.homebrew/bin/brew"
