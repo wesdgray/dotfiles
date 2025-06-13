@@ -2,5 +2,6 @@
     "nvim": "$HOME/.config/nvim",
     "zellij": "$HOME/.config/zellij",
     ".zshrc": "$HOME/.zshrc",
-    ".wezterm.lua": "$HOME/.wezterm.lua"
+    ".wezterm.lua": "$HOME/.wezterm.lua",
+    "ghostty.config": "$HOME/.config/ghostty/config"
 }

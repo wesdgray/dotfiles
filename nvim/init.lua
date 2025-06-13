@@ -17,7 +17,20 @@ vim.fn.system({
 })
 end
 vim.opt.rtp:prepend(lazypath)
-
+vim.lsp.enable('nixd')
+vim.lsp.config('nixd', {
+   cmd = { "nixd" },
+   settings = {
+      nixd = {
+         nixpkgs = {
+            expr = "import <nixpkgs> { }",
+         },
+         formatting = {
+            command = { "nixfmt" },
+         },
+      },
+   },
+})
 -- Setup leader for lazy and plugins after lazy is setup
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
