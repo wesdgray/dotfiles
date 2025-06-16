@@ -1,4 +1,4 @@
-vim.o.guifont = "MonoLisa:h12"
+vim.o.guifont = "JetBrainsMono NF:h12"
 vim.o.clipboard = "unnamedplus"
 vim.o.shiftwidth = 4
 vim.o.termguicolors = true
@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.lsp.enable('nixd')
 vim.lsp.config('nixd', {
    cmd = { "nixd" },
+   filetypes = { "nix" },
    settings = {
       nixd = {
          nixpkgs = {
